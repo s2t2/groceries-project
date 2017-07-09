@@ -53,10 +53,11 @@ departments = set(departments) # remove duplicate values
 print("--------------")
 print("THERE ARE " + str(len(departments)) + " DEPARTMENTS:")
 
+for department in departments:
+    print(" + " + department.title())
+
 # DESIRED OUTPUT:
 #
-#  --------------
-#  THERE ARE 10 DEPARTMENTS:
 #   + Babies (1 products)
 #   + Beverages (5 products)
 #   + Dairy Eggs (1 products)
