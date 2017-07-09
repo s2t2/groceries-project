@@ -27,7 +27,8 @@ print("--------------")
 print("THERE ARE " + str(len(products)) + " PRODUCTS:")
 
 for product in products:
-    print(" + " + product["name"])
+    price_usd = ' (${0:.2f})'.format(product["price"])
+    print(" + " + product["name"] + str(price_usd))
 
 # code.interact(local=locals())
 
