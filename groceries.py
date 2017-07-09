@@ -49,9 +49,14 @@ departments = map(department_name, products)
 departments = list(departments)
 
 departments = set(departments) # remove duplicate values
+departments = list(departments) # convert back to a list
+
+departments.sort() # this is mutating
 
 print("--------------")
 print("THERE ARE " + str(len(departments)) + " DEPARTMENTS:")
+
+# code.interact(local=locals())
 
 for department in departments:
     print(" + " + department.title())
