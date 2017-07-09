@@ -56,20 +56,10 @@ departments.sort() # this is mutating
 print("--------------")
 print("THERE ARE " + str(len(departments)) + " DEPARTMENTS:")
 
-# code.interact(local=locals())
+def get_products(department_name):
+    return [product for product in products if product["department"] == department_name] # list comprehension for the win. so helpful.
 
 for department in departments:
-    print(" + " + department.title())
-
-# DESIRED OUTPUT:
-#
-#   + Babies (1 products)
-#   + Beverages (5 products)
-#   + Dairy Eggs (1 products)
-#   + Dry Goods Pasta (1 products)
-#   + Frozen (4 products)
-#   + Household (1 products)
-#   + Meat Seafood (1 products)
-#   + Pantry (2 products)
-#   + Personal Care (2 products)
-#   + Snacks (2 products)
+    department_products = get_products(department)
+    product_count = len(department_products)
+    print(" + " + department.title() + " (" + str(product_count) + " products)")
